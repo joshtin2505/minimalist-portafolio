@@ -1,5 +1,47 @@
 ---
-import Section from "../Section.astro";
+import Section from "../Section.astro"
+import { projects } from "@cv"
 ---
 
-<Section title="Projects"></Section>
+<Section title="Projects">
+    <ul>
+        {projects.map(({description,highlights,name,url,github,isActive}) => (
+        <li>
+            <article>
+                <header>
+                    <a href={url} title={`Ver el proyecto ${name}`}>
+                        <h3>{name}</h3>
+                    </a>
+                    <p>{description}</p>
+                </header>
+                <footer>
+                    <ul>
+                        {
+                            highlights.map(highlight => {
+                                return <li>{highlight}</li>
+                            })
+                        }
+                    </ul>
+                </footer>
+            </article>
+        </li>
+        ))}
+    </ul>
+</Section>
+
+<style>
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+    article {
+        border-radius: .5rem;
+        border: 1px solid #f2f2f2;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        height: 100%;
+    }
+</style>
