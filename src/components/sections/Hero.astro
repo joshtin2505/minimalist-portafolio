@@ -16,6 +16,14 @@ import WorldMap from '@/icons/WorldMap.astro'
         GitHub,
         X
     }
+
+    const linkedin = profiles.find(({network}) => network === 'LinkedIn')?.url
+
+    const printInfo = [
+        email,
+        phone,
+        linkedin
+    ].filter(Boolean).join(' • ')
 ---
 <Section>
     <div class="container">
@@ -27,8 +35,11 @@ import WorldMap from '@/icons/WorldMap.astro'
                 {city}, {region}
             </span>
             <footer>
+                <div class="print">
+                    {printInfo}
+                </div>
                 {
-                   email && <a href={`mailto:${email}`}
+                   email && <a class="noPrint" href={`mailto:${email}`}
                    title={`Enviar un correo a ${name} al mail ${email}`}
                    target="_blank"
                    rel="noopener noreferrer"
@@ -38,7 +49,7 @@ import WorldMap from '@/icons/WorldMap.astro'
                    </a> 
                 }
                 {
-                   phone && <a href={`mailto:${phone}`}
+                   phone && <a class="noPrint" href={`mailto:${phone}`}
                    title={`llamar por telefono a ${name} al telefono ${phone}`}
                    target="_blank"
                    rel="noopener noreferrer"
@@ -50,7 +61,7 @@ import WorldMap from '@/icons/WorldMap.astro'
                     profiles.map(({network, url}) => {
                         const Icon = SOCIAL_ICONS[network]
                         return (
-                            <a 
+                            <a class="noPrint" 
                                 href={url}
                                 title={`Visitar el perfil de ${name} en ${network}`}
                                 target="_blank"
@@ -125,5 +136,16 @@ import WorldMap from '@/icons/WorldMap.astro'
     footer a:hover {
         background-color: #eee;
         border-color: #ddd;
+    }
+    .print{
+        display: none;
+    }
+    @media print {
+        .print {
+            display: block;
+        }
+        footer a {
+            display: none;
+        }
     }
 </style>
