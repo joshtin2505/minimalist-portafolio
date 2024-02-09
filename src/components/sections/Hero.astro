@@ -34,45 +34,44 @@ import WorldMap from '@/icons/WorldMap.astro'
                 <WorldMap/>
                 {city}, {region}
             </span>
-            <footer>
-                <div class="print">
+            <footer class="print">
                     {printInfo}
-                </div>
+            </footer>
+            <footer class="no-Print">
                 {
-                   email && <a class="noPrint" href={`mailto:${email}`}
-                   title={`Enviar un correo a ${name} al mail ${email}`}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   >
-                    <!-- robar icono -->
-                    <Mail/>
-                   </a> 
-                }
-                {
-                   phone && <a class="noPrint" href={`mailto:${phone}`}
-                   title={`llamar por telefono a ${name} al telefono ${phone}`}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   >
-                    <Phone/>
-                   </a> 
-                }
-                {
-                    profiles.map(({network, url}) => {
-                        const Icon = SOCIAL_ICONS[network]
-                        return (
-                            <a class="noPrint" 
-                                href={url}
-                                title={`Visitar el perfil de ${name} en ${network}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Icon/>
-                            </a>
-                        )
-                    })
-                
-                }
+                    email && <a href={`mailto:${email}`}
+                    title={`Enviar un correo a ${name} al mail ${email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                     <!-- robar icono -->
+                     <Mail/>
+                    </a> 
+                 }
+                 {
+                    phone && <a href={`mailto:${phone}`}
+                    title={`llamar por telefono a ${name} al telefono ${phone}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                     <Phone/>
+                    </a> 
+                 }
+                 {
+                     profiles.map(({network, url}) => {
+                         const Icon = SOCIAL_ICONS[network]
+                         return (
+                             <a href={url}
+                                 title={`Visitar el perfil de ${name} en ${network}`}
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                             >
+                                 <Icon/>
+                             </a>
+                         )
+                     })
+                 
+                 }
             </footer>
         </div>
         <figure>
@@ -117,6 +116,8 @@ import WorldMap from '@/icons/WorldMap.astro'
         letter-spacing: -0.03rem;
     }
     footer {
+        font-size: 0.65rem;
+        color: #555;
         display: flex;
         gap: 0.25rem;
         margin-top: 0.5rem;
@@ -144,7 +145,7 @@ import WorldMap from '@/icons/WorldMap.astro'
         .print {
             display: block;
         }
-        footer a {
+        .no-print{
             display: none;
         }
     }
