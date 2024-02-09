@@ -1,5 +1,9 @@
 <footer>
-    Pulsar <kbd>Ctrl</kbd> + <kbd>K</kbd>
+    <p>Pulsar</p>
+    <p>
+        <kbd>Ctrl</kbd> + <kbd>K</kbd>
+    </p>
+    <p>Para Paleta de Comandos</p>
 </footer>
 <ninja-keys placeholder="Buscar Comandos"></ninja-keys>
 <script>
@@ -28,7 +32,29 @@
   }
 </script>
 <style>
-  @media print {
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #eeeded;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 6px 0;
+}
+p {
+    color: #111;
+    font-size: 14px;
+    font-weight: medium;
+}
+kbd{
+    background: #ccc;
+    font-weight: normal;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+}
+@media print {
     ninja-keys {
       display: none !important
     }
