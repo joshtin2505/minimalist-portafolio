@@ -7,9 +7,10 @@ import Experience from '@/components/sections/Experience.astro'
 import Skills from '@/components/sections/Skills.astro'
 import Hero from '@/components/sections/Hero.astro'
 import KeyboardManager from '@/components/KeyboardManager.astro'
+import {basics} from '@cv'
 ---
 
-<Layout title="Minimalist Portfolio" >
+<Layout title={`Portafolio de ${basics.name} - `} >
 	<main>
 		<Hero />
 		<About />
@@ -28,4 +29,5 @@ import KeyboardManager from '@/components/KeyboardManager.astro'
 		margin: auto;
 		width: 100%;
 	}
+	
 </style>
