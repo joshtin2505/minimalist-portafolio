@@ -153,4 +153,20 @@ const profilesInfo = profiles.map((profile) => {
     border-radius: 5px;
     color: #333;
   }
+  html.dark footer {
+    background: #1f1f1f;
+    border-top: 1px solid #333;
+  }
+  html.dark p {
+    color: #fff;
+  }
+  html.dark kbd {
+    background: #333;
+    color: #fff;
+  }
+  @media screen and (max-width: 768px){
+    footer {
+      display: none;
+    }
+  }
 </style>

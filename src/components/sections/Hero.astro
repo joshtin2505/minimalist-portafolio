@@ -44,8 +44,7 @@ import WorldMap from '@/icons/WorldMap.astro'
                     target="_blank"
                     rel="noopener noreferrer"
                     >
-                     <!-- robar icono -->
-                     <Mail/>
+                        <Mail/>
                     </a> 
                  }
                  {
@@ -141,6 +140,36 @@ import WorldMap from '@/icons/WorldMap.astro'
     .print{
         display: none;
     }
+    html.dark footer a {
+        color: #ddd;
+        border-color: #333;
+    }
+    html.dark footer a:hover {
+        background-color: #333;
+        border-color: #aaa;
+    }
+    html.dark span {
+        color: #ccc;
+    }
+    html.dark h2 {
+        color: #eee;
+    }
+    html.dark h1 {
+        color: #fff;
+    }
+    @media screen and (max-width: 450px){
+        .container {
+            flex-direction: column-reverse;
+            gap: 1rem;
+            .info {
+                text-align: center;
+                text-wrap: pretty;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
     @media print {
         .print {
             display: block;

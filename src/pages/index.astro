@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import ToggleSwitch from '@/components/ToggleSwitch.astro'
 import About from '@/components/sections/About.astro'
 import Projects from '@/components/sections/Projects.astro'
 import Education from '@/components/sections/Education.astro'
@@ -12,6 +13,7 @@ import {basics} from '@cv'
 
 <Layout title={`Portafolio de ${basics.name} - `} >
 	<main>
+		<ToggleSwitch />
 		<Hero />
 		<About />
 		<Experience />
@@ -28,11 +30,18 @@ import {basics} from '@cv'
 		padding: 4rem;
 		margin: auto;
 		width: 100%;
+		position: relative;
 	}
+
 	html {
 		scrollbar-width: thin;
 		scrollbar-color: #ccc #eee;
 		scrollbar-arrow-color: transparent;
 		
 	}
+	html.dark{
+		scrollbar-color: #ccc #aeaeae;
+
+	}
+
 </style>
