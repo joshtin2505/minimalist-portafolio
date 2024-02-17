@@ -34,35 +34,36 @@
   },
   "work": [
     {
-      "name": "joshtin2505",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
+      "name": "Joshtin.dev",
+      "position": "FullStack Web Developer",
+      "url": "https://github.com/joshtin2505",
+      "startDate": "2022-05-10",
       "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "summary": "Marca personal, Aprendizaje y Desarrollo de proyectos web, personales, de la universidad, open source y para clientes.",
       "highlights": [
-        "Started the company"
+        ""        
       ]
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "name": "La Casita De Papel",
+      "position": "FullStack Web Developer - Next.js",
+      "url": "https://github.com/joshtin2505/lccp-ecommerce",
+      "startDate": "2023-12-1",
+      "endDate": null,
+      "summary": "Dessarrollo FullStack de la pagina web de la tienda La Casita De Papel",
       "highlights": [
-        "Started the company"
+        "Desarrollador lider del proyecto"        
       ]
     },
     {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
+      "name": "4to Semestre Ingenieria en Sistemas",
+      "position": "FullStack Web Developer - MERN STACK",
+      "url": "https://github.com/joshtin2505/optigestion",
+      "startDate": "2023-07-23",
+      "endDate": "2023-11-28",
+      "summary": "Dessarrollo de el proyecto Optigestion, proyecto de 4to semestre de ingenieria en sistemas",
       "highlights": [
-        "Started the company"
+        "Desarrollador lider del proyecto"        
       ]
     }
   ],
@@ -78,15 +79,15 @@
     ]
   }],
   "education": [{
-    "institution": "Universitat Oberta de Catalunya",
-    "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
+    "institution": "Fundacion Univercitaria Tecnologico Comfenalco",
+    "url": "https://tecnologicocomfenalco.edu.co/",
+    "area": "Ingeniero de Sistemas",
     "studyType": "Bachelor",
-    "startDate": "2003-01-01",
-    "endDate": "2009-01-01",
+    "startDate": "2022-01-024",
+    "endDate": null,
     "score": "4.0",
     "courses": [
-      "DB1101 - Basic SQL"
+      ""
     ]
   }],
   "awards": [{
@@ -96,10 +97,10 @@
     "summary": "There is no spoon."
   }],
   "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
+    "name": "Domina React",
+    "date": "2024-2-16",
+    "issuer": "LinkedIn",
+    "url": "https://www.linkedin.com/learning/certificates/731c4d0f005ca80b7e4c7b235e60fa1f22e7bfdce778326a8bd51a3b6eb8daec"
   }],
   "publications": [{
     "name": "Publication",
@@ -118,70 +119,70 @@
     },
     {
       "name": "CSS",
-      "level": "Master",
+      "level": "Middle",
       "keywords": [
         "Desarrollo Web", "Frontend", "Diseño Responsive"
       ]
     },
     {
       "name": "JavaScript",
-      "level": "Master",
+      "level": "Middle",
       "keywords": [
         "Desarrollo Web", "Frontend", "Backend", "Fullstack"
       ]
     },
     {
       "name": "Tailwind",
-      "level": "Avanzado",
+      "level": "Advanced",
       "keywords": [
         "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
       ]
     },
     {
       "name": "TypeScript",
-      "level": "Avanzado",
+      "level": "Advanced",
       "keywords": [
         "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
       ]
     },
     {
       "name": "Node",
-      "level": "Avanzado",
+      "level": "Middle",
       "keywords": [
         "Desarrollo Web", "Backend", "JavaScript", "Servidor"
       ]
     },
     {
       "name": "MySQL",
-      "level": "Avanzado",
+      "level": "Beginner",
       "keywords": [
         "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
       ]
     },
     {
       "name": "Git",
-      "level": "Avanzado",
+      "level": "Middle",
       "keywords": [
         "Control de Versiones", "Colaboración", "Código Fuente"
       ]
     },
     {
       "name": "GitHub",
-      "level": "Avanzado",
+      "level": "Middle",
       "keywords": [
         "Control de Versiones", "Colaboración", "Código Fuente", "Git"
       ]
     },
     {
       "name": "Next.js",
-      "level": "Avanzado",
+      "level": "Middle",
       "keywords": [
         "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
       ]
     },
     {
       "name": "React",
-      "level": "Avanzado",
+      "level": "Advanced",
       "keywords": [
         "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
       ]
@@ -194,82 +195,40 @@
     },
     {
       "language": "English",
-      "fluency": "Advanced"
+      "fluency": "Middle level"
     }
   ],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
   "projects": [
     {
-      "name": "mars.codes",
-      "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
+      "name": "Optigestion",
+      "isActive": false,
+      "description": "Gestion de compras para empresas y fundaciones, maneja tus compras de manera eficiente y segura.",
       "highlights": [
-        "Elige tu propia aventura",
-        "En desarrollo"
+        "Gestiona mejor tus compras",
+        "En pausa", 
+        "Fullstack App"
       ],
-      "url": "https://mars.codes"
+      "url": "https://github.com/joshtin2505/optigestion"
     },
     {
-      "name": "AdventJS",
+      "name": "La Casita De Papel Ecommerce",
       "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
+      "description": "Pagina Web e commerce para la tienda La Casita De Papel",
       "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
+        "E-Commerce",
+        "En desarrollo",
+        "Fullstack App"
       ],
-      "url": "https://advent.js/dev"
+      "url": "https://github.com/joshtin2505/lccp-ecommerce"
     },
     {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
+      "name": "Portafolio Minimalista",
+      "isActive": false,
+      "description": "Portafolio minimalista para desarrolladores web, inspirado en el diseño de Bartosz Jarocki pero justamente en la versión de midudev",
       "highlights": [
-        "+2000 usuarios activos",
-        "Retos para cualquier lenguaje"
+        "Desarrollado por terceros"
       ],
-      "url": "https://codember.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": [
-        "100k visitas al mes",
-        "Desarrollado por la comunidad"
-      ],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": [
-        "100% gratuito",
-        "+500 soluciones de la comunidad"
-      ],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": [
-        "+15k tickets repartidos",
-        "+50k espectadores en directo"
-      ],
-      "url": "https://miduconf.com"
+      "url": "https://github.com/joshtin2505/minimalist-portafolio"
     }
   ]
 }
