@@ -21,6 +21,6 @@ git clone https://github.com/joshtin2505/minimalist-portafolio.git
 
 ### Proximas Features
 
-- Dark Mode
+- English Lang
 
  [License: MIT](./Licence)
