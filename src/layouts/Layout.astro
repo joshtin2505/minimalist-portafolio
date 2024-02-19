@@ -1,19 +1,26 @@
 ---
 interface Props {
 	title: string;
+	description: string;
+	autor: string;
+	keywords: string;
 }
 
-const { title } = Astro.props;
+const { title, description, autor, keywords } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image" href="/favicon.webp" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="keywords" content={keywords}>
+		<meta name="author" content={autor}>
+		<meta name="language" content="Español">
+		<meta name="robots" content="index, nofollow, noarchive, max-snippet-length=150">
 		<title>{title}</title>
 	</head>
 	<body>

@@ -1,17 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import ToggleSwitch from '@/components/ToggleSwitch.astro'
-import About from '@/components/sections/About.astro'
-import Projects from '@/components/sections/Projects.astro'
-import Education from '@/components/sections/Education.astro'
-import Experience from '@/components/sections/Experience.astro'
-import Skills from '@/components/sections/Skills.astro'
-import Hero from '@/components/sections/Hero.astro'
-import KeyboardManager from '@/components/KeyboardManager.astro'
-import {basics} from '@cv'
+import Layout from "../layouts/Layout.astro";
+import ToggleSwitch from "@/components/ToggleSwitch.astro";
+import About from "@/components/sections/About.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Education from "@/components/sections/Education.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Hero from "@/components/sections/Hero.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
+import { basics } from "@cv";
 ---
 
-<Layout title={`Portafolio de ${basics.name} - `} >
+<Layout
+	title={`Portafolio de ${basics.name} - FullStack Web Developer`}
+	description="Portafolio Web de justin castro perez (joshtin.dev). FullStack Web Developer con 2 años de experiencia"
+	autor="Joshtin.Dev"
+	keywords="portafolio, portfolio, jostinc, joshtin, joshtin2505, justin castro perez portafolio justin castro"
+>
 	<main>
 		<ToggleSwitch />
 		<Hero />
@@ -26,7 +31,7 @@ import {basics} from '@cv'
 </Layout>
 
 <style>
-	main{
+	main {
 		padding: 4rem;
 		margin: auto;
 		width: 100%;
@@ -37,11 +42,8 @@ import {basics} from '@cv'
 		scrollbar-width: thin;
 		scrollbar-color: #ccc #eee;
 		scrollbar-arrow-color: transparent;
-		
 	}
-	html.dark{
+	html.dark {
 		scrollbar-color: #ccc #aeaeae;
-
 	}
-
 </style>
