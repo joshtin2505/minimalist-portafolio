@@ -2,7 +2,7 @@
     <h1>Portafolio Minimalista</h1>
     
 </div>
-<img src='mockup.png' />
+<img src='mockup.jpg' />
 Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">``Bartosz Jarocki``</a> 
 <br>
 Version de <a href="https://github.com/midudev/minimalist-portfolio-json">``MiduDev``</a>
