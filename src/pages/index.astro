@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ToggleSwitch from "@/components/ToggleSwitch.astro";
+import ToggleSwitch from "@/components/DarkMode.astro";
 import About from "@/components/sections/About.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Education from "@/components/sections/Education.astro";
@@ -8,6 +8,7 @@ import Experience from "@/components/sections/Experience.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Hero from "@/components/sections/Hero.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
+import ThemeButton from "@/components/ThemeButton.astro";
 import { basics } from "@cv";
 ---
 
@@ -18,7 +19,8 @@ import { basics } from "@cv";
 	keywords="portafolio, portfolio, jostinc, joshtin, joshtin2505, justin castro perez portafolio justin castro"
 >
 	<main>
-		<ToggleSwitch />
+		<!-- <ToggleSwitch /> -->
+		<ThemeButton />
 		<Hero />
 		<About />
 		<Experience />

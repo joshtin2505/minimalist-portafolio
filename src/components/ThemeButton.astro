@@ -1,0 +1,74 @@
+---
+import Sun from "@/icons/Sun.astro";
+import Moon from "../icons/Moon.astro";
+---
+
+<button class="btnTheme">
+  <Moon/>
+  <Sun />
+</button>
+<script>
+  type Theme = "light" | "dark";
+
+  const btn = document.querySelector(".btnTheme") as HTMLButtonElement;
+
+
+  const LS = window.localStorage;
+
+  let firstState =
+    (LS.getItem("theme") as Theme | null) !== null
+      ? (LS.getItem("theme") as Theme)
+      : window.matchMedia("(prefers-color-scheme: dark)")
+        ? "dark"
+        : "light";
+  console.log(firstState);
+
+  firstState === "dark"
+      ? document.querySelector("html")?.classList.add("dark")
+      : document.querySelector("html")?.classList.remove("dark");
+
+  btn.addEventListener("click", toggleTheme);
+  function toggleTheme() {
+    const newTheme = firstState === "light" ? "dark" : "light";
+    firstState = newTheme;
+    localStorage.setItem("theme", firstState);
+    firstState === "dark"
+      ? document.querySelector("html")?.classList.add("dark")
+      : document.querySelector("html")?.classList.remove("dark");
+  }
+</script>
+<style>
+  .btnTheme {
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+    display: flex;
+    color: #777;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e5e5;
+    background: transparent;
+    padding: 4px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 6px;
+  }
+  .btnTheme:hover {
+    background-color: #eee;
+    border-color: #ddd;
+  }
+
+  html.dark .btnTheme {
+    color: #fff;
+  }
+  html.dark .btnTheme:hover {
+    background: #333;
+  }
+  @media print {
+    .btnTheme {
+      display: none;
+    }
+  }
+</style>
