@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Justin Castro Perez",
-    "label": "FullStack Web Developer con 2 años de experiencia",
+    "label": "FrontEnd Developer",
     "image": "/me.webp",
     "email": "justincastro2505@gmail.com",
     "phone": "+57 3185003169",
     "url": "https://joshtin.dev",
-    "summary": "2 años de experiencia en dessarrollo web. Soy estudiante de quinto semestre de ingeniería en sistemas con una sólida formación en desarrollo web y de software. Cuento con amplios conocimientos en esta area y tengo experiencia en React, node, express, MongoDB así como en Photoshop, Figma, Excel e Illustrator, me he desempeñado como Desarrollador Web Full Stack en diferentes proyectos, personales y universitarios. Me gusta aprender y aportar al crecimiento de las demas personas.",
+    "summary": "Actualmente curso el quinto semestre de Ingeniería en Sistemas. Tengo una sólida formación en desarrollo web y de software. Me he desempeñado como Desarrollador Web en diferentes proyectos, personales, laborales y universitarios. Mi enfoque va más allá de la ejecución técnica; disfruto profundizando en nuevos conocimientos y contribuyendo al crecimiento, tanto personal como profesional, de quienes me rodean.",
     "location": {
       "address": "",
       "postalCode": "130004",
@@ -33,35 +33,14 @@
     ]
   },
   "work": [
-    {
-      "name": "Joshtin.dev",
-      "position": "FullStack Web Developer",
-      "url": "https://github.com/joshtin2505",
-      "startDate": "2022-05-10",
-      "endDate": null,
-      "summary": "Marca personal, Aprendizaje y Desarrollo de proyectos web, personales, de la universidad, open source y para clientes.",
-      "highlights": [
-        ""        
-      ]
-    },
+
     {
       "name": "La Casita De Papel",
-      "position": "FullStack Web Developer - Next.js",
+      "position": "Web Developer - Next.js",
       "url": "https://github.com/joshtin2505/lccp-ecommerce",
       "startDate": "2023-12-1",
       "endDate": null,
-      "summary": "Dessarrollo FullStack de la pagina web de la tienda La Casita De Papel",
-      "highlights": [
-        "Desarrollador lider del proyecto"        
-      ]
-    },
-    {
-      "name": "4to Semestre Ingenieria en Sistemas",
-      "position": "FullStack Web Developer - MERN STACK",
-      "url": "https://github.com/joshtin2505/optigestion",
-      "startDate": "2023-07-23",
-      "endDate": "2023-11-28",
-      "summary": "Dessarrollo de el proyecto Optigestion, proyecto de 4to semestre de ingenieria en sistemas",
+      "summary": "Dessarrollo del e-commerce de La Casita De Papel",
       "highlights": [
         "Desarrollador lider del proyecto"        
       ]
@@ -132,13 +111,6 @@
       ]
     },
     {
-      "name": "Tailwind",
-      "level": "Advanced",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
-      ]
-    },
-    {
       "name": "TypeScript",
       "level": "Advanced",
       "keywords": [
@@ -146,15 +118,43 @@
       ]
     },
     {
-      "name": "Node",
+      "name": "Node.js",
       "level": "Middle",
       "keywords": [
         "Desarrollo Web", "Backend", "JavaScript", "Servidor"
       ]
     },
     {
-      "name": "MySQL",
+      "name": "Tailwind",
+      "level": "Advanced",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "SQL",
       "level": "Beginner",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "level": "Middle",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level": "Middle",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Express.js",
+      "level": "Middle",
       "keywords": [
         "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
       ]
@@ -186,6 +186,13 @@
       "keywords": [
         "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
       ]
+    },
+    {
+      "name": "Java",
+      "level": "Middle",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+      ]
     }
   ],
   "languages": [
@@ -205,8 +212,7 @@
       "description": "Gestion de compras para empresas y fundaciones, maneja tus compras de manera eficiente y segura.",
       "highlights": [
         "Gestiona mejor tus compras",
-        "En pausa", 
-        "Fullstack App"
+        "En pausa"
       ],
       "url": "https://github.com/joshtin2505/optigestion"
     },
@@ -216,19 +222,9 @@
       "description": "Pagina Web e commerce para la tienda La Casita De Papel",
       "highlights": [
         "E-Commerce",
-        "En desarrollo",
-        "Fullstack App"
+        "En desarrollo"
       ],
       "url": "https://github.com/joshtin2505/lccp-ecommerce"
-    },
-    {
-      "name": "Portafolio Minimalista",
-      "isActive": false,
-      "description": "Portafolio minimalista para desarrolladores web, inspirado en el diseño de Bartosz Jarocki pero justamente en la versión de midudev",
-      "highlights": [
-        "Desarrollado por terceros"
-      ],
-      "url": "https://github.com/joshtin2505/minimalist-portafolio"
     }
   ]
 }
