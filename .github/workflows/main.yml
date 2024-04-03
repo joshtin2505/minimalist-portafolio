@@ -11,16 +11,27 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '16'
-    - run: pnpm install
-    # - run: pnpm run start
-    - run: pnpm run dev
-      env:
-        INSTAGRAM_API_KEY: ${{ secrets.INSTAGRAM_API_KEY }}
-        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        LINKEDIN_API_KEY: ${{ secrets.YOUTUBE_API_KEY }} 
-    - run: |
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Get latest commit date
+      id: latest-commit
+      run: |
+          ACCESS_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          LATEST_COMMITS=$(curl -s -H "Authorization: token $ACCESS_TOKEN" "https://api.github.com/user/repos" | jq -r '.[].pushed_at' | sort | tail -n 1)
+          echo "::set-output name=date::$LATEST_COMMITS"
+    - name: Update CV
+      run: |
+        echo "Último commit: ${{ steps.latest-commit.outputs.date }}" > src/scrips/cv.md
         git config user.name joshtin2505
         git config user.email justincastro2505@gmail.com
-        git add .
-        git diff --quiet && git diff --staged --quiet || git commit -m "[bot] Update CV with latest info"
-        git push origin master
+        git add src/pages/index.astro
+        git commit -m "Actualización automática del CV con el último commit"
+        git push origin main
+    # - name: Commit files
+    #   run: |
+    #     git config user.name joshtin2505
+    #     git config user.email justincastro2505@gmail.com
+    #     git add .
+    #     git diff --quiet && git diff --staged --quiet || git commit -m "[bot] Update CV with latest info"
+    #     git push origin master
