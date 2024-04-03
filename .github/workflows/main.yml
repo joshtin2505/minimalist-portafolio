@@ -1,0 +1,26 @@
+name: Update CV
+on: 
+  schedule: 
+    - cron: "0 */1 * * *"
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '16'
+    - run: pnpm install
+    # - run: pnpm run start
+    - run: pnpm run dev
+      env:
+        INSTAGRAM_API_KEY: ${{ secrets.INSTAGRAM_API_KEY }}
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        LINKEDIN_API_KEY: ${{ secrets.YOUTUBE_API_KEY }} 
+    - run: |
+        git config user.name joshtin2505
+        git config user.email justincastro2505@gmail.com
+        git add .
+        git diff --quiet && git diff --staged --quiet || git commit -m "[bot] Update CV with latest info"
+        git push origin master
