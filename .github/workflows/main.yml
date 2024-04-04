@@ -1,7 +1,7 @@
 name: Update CV
 on: 
   schedule: 
-    - cron: "1 * * * *"
+    - cron: "0 */1 * * *"
 jobs: 
   build: 
     runs-on: ubuntu-latest
@@ -14,20 +14,13 @@ jobs:
     - name: Install dependencies
       run: pnpm install
 
-    - name: Get latest commit date
-      id: latest-commit
-      run: |
-          ACCESS_TOKEN=${{ secrets.GITHUB_TOKEN }}
-          LATEST_COMMITS=$(curl -s -H "Authorization: token $ACCESS_TOKEN" "https://api.github.com/user/repos" | jq -r '.[].pushed_at' | sort | tail -n 1)
-          echo "::set-output name=date::$LATEST_COMMITS"
     - name: Update CV
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo "Último commit: ${{ steps.latest-commit.outputs.date }}" > src/scrips/cv.md
-        git config user.name joshtin2505
-        git config user.email justincastro2505@gmail.com
-        git add src/pages/index.astro
-        git commit -m "Actualización automática del CV con el último commit"
-        git push origin main
+        pnpm i
+        pnpm run update-cv
+        
     # - name: Commit files
     #   run: |
     #     git config user.name joshtin2505
