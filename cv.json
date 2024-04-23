@@ -207,14 +207,14 @@
   ],
   "projects": [
     {
-      "name": "Optigestion",
-      "isActive": false,
+      "name": "Optigestion client",
+      "isActive": true,
       "description": "Gestion de compras para empresas y fundaciones, maneja tus compras de manera eficiente y segura.",
       "highlights": [
         "Gestiona mejor tus compras",
-        "En pausa"
+        "Version 2.0"
       ],
-      "url": "https://github.com/joshtin2505/optigestion"
+      "url": "https://github.com/joshtin2505/optigestion-2-front"
     },
     {
       "name": "La Casita De Papel Ecommerce",
