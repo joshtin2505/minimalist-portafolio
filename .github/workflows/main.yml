@@ -40,8 +40,13 @@ jobs:
           git config --global user.name "joshtin2505"
           git config --global user.email "justincastro2505@gmail.com"
           git remote set-url origin https://${{ secrets.ACCESS_TOKEN }}@github.com/joshtin2505/minimalist-portafolio.git
-
+          
       - name: Run script # Ejecuta el script
         run: |
           chmod +x ./.github/scripts/auto_commit.sh
           bash ./.github/scripts/auto_commit.sh
+      - name: Push changes # Hace push de los cambios
+        run: |
+          git add .
+          git commit -m "new commit"
+          git push
