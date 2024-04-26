@@ -20,6 +20,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
+          echo "Committing changes"
           git config --global user.name "joshtin2505"
           git config --global user.email "justincastro2505@gmail.com"
           git add .
