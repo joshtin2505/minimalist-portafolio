@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "update-cv": "node src/scripts/updateCv.js"
+    "update-cv": "node src/updateCV.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",

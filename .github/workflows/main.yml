@@ -21,7 +21,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '16'
+      - run: npm install
+      - run: npm run update-cv
       - name: Set up Git credentials # Configura las credenciales de Git
         run: |
           git config --global user.name "joshtin2505"
@@ -35,5 +39,5 @@ jobs:
       - name: Push changes # Hace push de los cambios
         run: |
           git add .
-          git commit -m "new commit"
+          git diff --quiet && git diff --staged --quiet || git commit -m "new commit"
           git push
