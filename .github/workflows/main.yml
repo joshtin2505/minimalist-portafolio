@@ -9,23 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # steps:
-    #   - name: Checkout del código
-    #     uses: actions/checkout@v2  # Utiliza la acción oficial de GitHub para hacer checkout del código
-  
-    #   - name: Modificar archivos
-    #     run: echo "Nuevos cambios" >> archivo.txt  # Por ejemplo, añadir una línea a un archivo
-  
-    #   - name: Commit y push
-    #     env:
-    #       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-    #     run: |
-    #       echo "Committing changes"
-    #       git config --global user.name "joshtin2505"
-    #       git config --global user.email "justincastro2505@gmail.com"
-    #       git add .
-    #       git commit -m "new commit"
-    #       git push https://$ACCESS_TOKEN@github.com/joshtin2505/minimalist-portafolio.git HEAD:main
 
     permissions: # Otorga los permisos para el flujo de trabajo - Esto es necesario para crear un commit
       issues: write
