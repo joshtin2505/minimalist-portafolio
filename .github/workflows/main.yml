@@ -17,8 +17,8 @@ jobs:
 
       - name: Set up Git credentials # Configura las credenciales de Git
         run: |
-          git config --global user.name ""your-username"
-          git config --global user.email "your-email@example.com"
+          git config --global user.name "joshtin2505"
+          git config --global user.email "justincastro2505@gmail.com"
           git remote set-url origin https://${{ secrets.YOUR_GITHUB_TOKEN }}@github.com/username/repo.git
 
       - name: Run script # Ejecuta el script
