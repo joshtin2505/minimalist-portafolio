@@ -1,9 +1,13 @@
 name: Update CV
 on: 
+  push:
+    branches:
+      - master
+  
+  workflow_dispatch:
+
   schedule: 
     - cron: "*/5 * * * *"
-  # push:
-  #   branches: [ "main" ]
 
 jobs:
   build:
