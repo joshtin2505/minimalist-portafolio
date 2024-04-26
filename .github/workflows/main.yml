@@ -24,7 +24,7 @@ jobs:
           git config --global user.email "justincastro2505@gmail.com"
           git add .
           git commit -m "new commit"
-          git push
+          git push https://$ACCESS_TOKEN@github.com/joshtin2505/minimalist-portafolio.git HEAD:main
 
     # permissions: # Otorga los permisos para el flujo de trabajo - Esto es necesario para crear un commit
     #   issues: write
