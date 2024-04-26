@@ -4,27 +4,24 @@ on:
     - cron: "*/5 * * * *"
 
 jobs:
-  commit:
+  build:
     runs-on: ubuntu-latest
+
+    permissions: # Otorga los permisos para el flujo de trabajo - Esto es necesario para crear un commit
+      issues: write
+      pull-requests: write
+      contents: write
+
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Configurar nombre de usuario y correo electrónico
+      - name: Set up Git credentials # Configura las credenciales de Git
         run: |
-          git config --global user.name 'joshtin2505'
-          git config --global user.email 'justincastro2505@egmail.com'
+          git config --global user.name ""your-username"
+          git config --global user.email "your-email@example.com"
+          git remote set-url origin https://${{ secrets.YOUR_GITHUB_TOKEN }}@github.com/username/repo.git
 
-      - name: Realizar cambios en el código
-        run: echo "$(date)" >> archivo.txt # Puedes reemplazar esto con cualquier comando para modificar tus archivos
-
-      - name: Commit cambios
+      - name: Run script # Ejecuta el script
         run: |
-          git add .
-          git commit -m "Commit automático $(date)"
-      
-      - name: Push cambios
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          chmod +x ./.github/scripts/auto_commit.sh
+          bash ./.github/scripts/auto_commit.sh
