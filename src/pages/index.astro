@@ -8,7 +8,12 @@ import Skills from "@/components/sections/Skills.astro";
 import Hero from "@/components/sections/Hero.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
 import ThemeButton from "@/components/ThemeButton.astro";
-import { basics } from "@cv";
+// import { basics } from "@cv";
+import { fetchCV } from "@/api"
+
+const data = await fetchCV()
+const { basics } = data[0].cv_data
+
 ---
 
 <Layout
@@ -20,7 +25,7 @@ import { basics } from "@cv";
 	<main>
 		<!-- <ToggleSwitch /> -->
 		<ThemeButton />
-		<Hero />
+		<Hero basics={basics} />
 		<About />
 		<Experience />
 		<Education />
