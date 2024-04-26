@@ -2,29 +2,29 @@ name: Update CV
 on: 
   schedule: 
     - cron: "*/5 * * * *"
-jobs: 
-  build: 
+
+jobs:
+  commit:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '16'
-    - name: Install dependencies
-      run: pnpm install
+      - name: Checkout código
+        uses: actions/checkout@v2
 
-    - name: Update CV
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        pnpm i
-        pnpm run update-cv
-        
-    # - name: Commit files
-    #   run: |
-    #     git config user.name joshtin2505
-    #     git config user.email justincastro2505@gmail.com
-    #     git add .
-    #     git diff --quiet && git diff --staged --quiet || git commit -m "[bot] Update CV with latest info"
-    #     git push origin master
+      - name: Configurar nombre de usuario y correo electrónico
+        run: |
+          git config --global user.name 'joshtin2505'
+          git config --global user.email 'justincastro2505@egmail.com'
+
+      - name: Realizar cambios en el código
+        run: echo "$(date)" >> archivo.txt # Puedes reemplazar esto con cualquier comando para modificar tus archivos
+
+      - name: Commit cambios
+        run: |
+          git add .
+          git commit -m "Commit automático $(date)"
+      
+      - name: Push cambios
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
