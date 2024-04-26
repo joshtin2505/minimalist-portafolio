@@ -1,7 +1,7 @@
 name: Update CV
 on: 
   schedule: 
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --global user.name "joshtin2505"
           git config --global user.email "justincastro2505@gmail.com"
-          git remote set-url origin https://${{ secrets.YOUR_GITHUB_TOKEN }}@github.com/username/repo.git
+          git remote set-url origin https://${{ secrets.YOUR_GITHUB_TOKEN }}@github.com/joshtin2505/minimalist-portafolio.git
 
       - name: Run script # Ejecuta el script
         run: |
