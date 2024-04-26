@@ -17,6 +17,8 @@ jobs:
         run: echo "Nuevos cambios" >> archivo.txt  # Por ejemplo, añadir una línea a un archivo
   
       - name: Commit y push
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
           git config --global user.name "joshtin2505"
           git config --global user.email "justincastro2505@gmail.com"
