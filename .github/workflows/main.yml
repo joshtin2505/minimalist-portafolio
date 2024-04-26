@@ -21,7 +21,7 @@ jobs:
           git config --global user.name "joshtin2505"
           git config --global user.email "justincastro2505@gmail.com"
           git add .
-          git commit -m "Mensaje del commit"
+          git commit -m "new commit"
           git push
 
     # permissions: # Otorga los permisos para el flujo de trabajo - Esto es necesario para crear un commit
