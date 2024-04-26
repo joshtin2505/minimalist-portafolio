@@ -39,5 +39,5 @@ jobs:
       - name: Push changes # Hace push de los cambios
         run: |
           git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "new commit"
+          git commit -m "new commit"
           git push
