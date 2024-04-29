@@ -1,5 +1,12 @@
 import { fetchCV } from "./api.js"
 
-const data = await fetchCV()
-export const cv = data[0].cv_data
-console.log(cv)
+var cvData
+
+setInterval(async () => {
+  const data = await fetchCV()
+  cvData = data[0].cv_data
+  console.log(cvData)
+}, 5000)
+
+console.log("updateCV.js loaded", cvData)
+export const cv = () => cvData

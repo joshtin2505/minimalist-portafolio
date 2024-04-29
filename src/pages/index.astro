@@ -11,8 +11,15 @@ import ThemeButton from "@/components/ThemeButton.astro";
 // import { basics } from "@cv";
 import { fetchCV } from "@/api"
 
-const data = await fetchCV()
-const { basics } = data[0].cv_data
+var data = await fetchCV()
+
+async function actualizarDatos() {
+	data = await fetchCV()
+}
+setInterval(actualizarDatos, 5000)
+console.log(data)
+const cvData = data[0].cv_data
+const { basics } = cvData
 
 ---
 
