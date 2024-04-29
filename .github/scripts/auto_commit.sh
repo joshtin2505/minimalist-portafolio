@@ -1,3 +1,3 @@
-combre_carpeta="commit.txt"
+nombre_carpeta="commit.txt"
 mkdir "$nombre_carpeta"
 echo "Carpeta '$nombre_carpeta' creada exitosamente."
