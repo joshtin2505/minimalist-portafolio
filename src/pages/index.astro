@@ -8,18 +8,8 @@ import Skills from "@/components/sections/Skills.astro";
 import Hero from "@/components/sections/Hero.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
 import ThemeButton from "@/components/ThemeButton.astro";
-// import { basics } from "@cv";
-import { fetchCV } from "@/api"
+import { basics } from "@cv";
 
-var data = await fetchCV()
-
-async function actualizarDatos() {
-	data = await fetchCV()
-}
-setInterval(actualizarDatos, 5000)
-console.log(data)
-const cvData = data[0].cv_data
-const { basics } = cvData
 
 ---
 
@@ -32,7 +22,7 @@ const { basics } = cvData
 	<main>
 		<!-- <ToggleSwitch /> -->
 		<ThemeButton />
-		<Hero basics={basics} />
+		<Hero />
 		<About />
 		<Experience />
 		<Education />

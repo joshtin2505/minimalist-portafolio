@@ -8,30 +8,9 @@ import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 
-interface Props {
-  basics: {
-    name: string
-    label: string
-    email: string
-    image: string
-    phone: string
-    location: {
-      address: string
-      postalCode: string
-      city: string
-      countryCode: string
-      region: string
-    }
-    profiles?: {
-      network: string
-      username: string
-      url: string
-    }[]
-  }
-}
 
-// const { name, label, email, image, location, phone, profiles } = basics
-const { name, label, email, image, location, phone, profiles } = Astro.props.basics
+
+const { name, label, email, image, location, phone, profiles } = basics
 
 const SOCIAL_ICONS: Record<string, any> = {
   LinkedIn,
@@ -39,7 +18,7 @@ const SOCIAL_ICONS: Record<string, any> = {
   X,
 }
 
-const linkedin = (profiles && profiles.length > 0) ? profiles.find(({ network }) => network === "LinkedIn")?.url : undefined
+const linkedin = profiles.find(({ network }) => network === "LinkedIn")?.url
 
 const {city, region} = location
 
